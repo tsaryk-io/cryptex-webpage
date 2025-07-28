@@ -1,0 +1,475 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CryptexLLM - Reprogramming LLMs for Financial Time Series Forecasting</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@200;300;400;500;600;700;800&display=swap" rel="stylesheet">
+</head>
+<body>
+    <nav class="navbar">
+        <div class="nav-container">
+            <div class="nav-logo">
+                <img src="img/cryptex-logo.png" alt="CryptexLLM Logo">
+            </div>
+            <div class="nav-menu">
+                <a href="#overview" class="nav-link">Project Overview</a>
+                <a href="#work" class="nav-link">Our Work</a>
+                <a href="#faq" class="nav-link">FAQ</a>
+                <a href="contact.html" class="nav-btn">Learn More</a>
+            </div>
+            <div class="nav-toggle" id="navToggle">
+                <span class="bar"></span>
+                <span class="bar"></span>
+                <span class="bar"></span>
+            </div>
+        </div>
+    </nav>
+
+    <main>
+        <section class="hero">
+            <div class="hero-container">
+                <h1 class="hero-title">CryptexLLM. <span class="hero-subtitle">Reprogramming LLMs for Financial Time Series Forecasting.</span></h1>
+                <a href="https://github.com/abenhnini/Time-LLM-Cryptex" target="_blank" class="hero-btn">View on GitHub</a>
+            </div>
+        </section>
+
+        <section id="overview" class="section">
+            <div class="container">
+                <h2>Project Overview</h2>
+                <p>CryptexLLM represents a groundbreaking approach to financial time series forecasting by reprogramming Large Language Models (LLMs) specifically for financial data analysis. Our innovative methodology bridges the gap between natural language processing capabilities and quantitative financial modeling.</p>
+                <p>By leveraging the inherent pattern recognition abilities of LLMs, we've developed a system that can understand and predict complex financial market behaviors with unprecedented accuracy and interpretability.</p>
+                
+                <div class="architecture-section">
+                    <h3>Technical Architecture</h3>
+                    <div class="architecture-content">
+                        <div class="architecture-image">
+                            <img src="img/architecture.png" alt="CryptexLLM Architecture Diagram">
+                        </div>
+                        <div class="architecture-text">
+                            <div class="architecture-item clickable-card" data-card="patch">
+                                <h4>Patch "Reprogramming"</h4>
+                                <p>Time series data is divided into patches (subsequences), where each patch becomes a "word" in the LLM vocabulary. This approach enables efficient processing of long financial sequences while maintaining temporal relationships.</p>
+                                <div class="hidden-detail">
+                                    <div class="card-detail-image">
+                                        <img src="img/patch-reprogramming.png" alt="Patch-based Processing Diagram">
+                                    </div>
+                                    <div class="card-detail-content">
+                                        <h4>Patch "Reprogramming"</h4>
+                                        <p>This innovative approach transforms time series forecasting by treating financial data like natural language. Each patch represents a temporal segment that carries semantic meaning, allowing the LLM to understand market patterns and trends as if reading a financial narrative.</p>
+                                        <ul>
+                                            <li>Divides continuous time series into meaningful subsequences</li>
+                                            <li>Maps each patch to vocabulary tokens for LLM processing</li>
+                                            <li>Preserves temporal dependencies across patches</li>
+                                            <li>Enables scalable processing of long financial sequences</li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="architecture-item clickable-card" data-card="reprogramming">
+                                <h4>Prompt-as-Prefix</h4>
+                                <p>Our method keeps pre-trained LLM weights frozen (no fine-tuning required) and uses learnable input/output projections with positional embeddings to maintain temporal order, preserving the model's original capabilities.</p>
+                                <div class="hidden-detail">
+                                    <div class="card-detail-image">
+                                        <img src="img/prompt-as-prefix.png" alt="Prompt-as-Prefix Strategy Diagram">
+                                    </div>
+                                    <div class="card-detail-content">
+                                        <h4>Prompt-as-Prefix</h4>
+                                        <p>By keeping the pre-trained weights frozen, we preserve the LLM's learned representations while adapting it for financial forecasting through lightweight, learnable projections.</p>
+                                        <ul>
+                                            <li>Frozen LLM weights maintain original language understanding</li>
+                                            <li>Learnable input projections adapt time series to LLM space</li>
+                                            <li>Output projections convert LLM outputs to forecasts</li>
+                                            <li>Positional embeddings encode temporal relationships</li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="architecture-item clickable-card" data-card="variants">
+                                <h4>Normalization</h4>
+                                <p>CryptexLLM supports multiple backbone architectures including LLaMA-7B (primary), GPT-2 (lightweight), and BERT (bidirectional), providing flexibility for different computational requirements.</p>
+                                <div class="hidden-detail">
+                                    <div class="card-detail-image">
+                                        <img src="img/normalization.png" alt="Normalization Strategy Diagram">
+                                    </div>
+                                    <div class="card-detail-content">
+                                        <h4>Normalization</h4>
+                                        <p>Different LLM backbones offer various advantages for financial forecasting, from lightweight efficiency to bidirectional context understanding.</p>
+                                        <ul>
+                                            <li><strong>LLaMA-7B:</strong> Primary backbone with optimal performance-efficiency balance</li>
+                                            <li><strong>GPT-2:</strong> Lightweight option for resource-constrained environments</li>
+                                            <li><strong>BERT:</strong> Bidirectional processing for comprehensive co000ntext analysis</li>
+                                            <li>Consistent API across all variants for easy switching</li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="dataset-section">
+                        <h3>Cryptex Dataset</h3>
+                        <div class="dataset-content">
+                            <div class="dataset-description">
+                                <p>The Cryptex dataset contains high-resolution OHLCV (Open, High, Low, Close, Volume) time series data for the BTC-USDT trading pair, extracted from the Binance.us exchange between September 2019 and July 2023. It features:</p>
+                            </div>
+                            <div class="dataset-toggle-list">
+                                <div class="toggle-item">
+                                    <div class="toggle-header" data-toggle="granularity">
+                                        <span class="toggle-icon">⏱️</span>
+                                        <h4>Time Granularity</h4>
+                                        <span class="toggle-arrow">▼</span>
+                                    </div>
+                                    <div class="toggle-content" id="granularity">
+                                        <p>Down to 1-second candlesticks</p>
+                                    </div>
+                                </div>
+                                <div class="toggle-item">
+                                    <div class="toggle-header" data-toggle="columns">
+                                        <span class="toggle-icon">📊</span>
+                                        <h4>Data Columns</h4>
+                                        <span class="toggle-arrow">▼</span>
+                                    </div>
+                                    <div class="toggle-content" id="columns">
+                                        <p>timestamp, open, close, high, low, volume</p>
+                                    </div>
+                                </div>
+                                <div class="toggle-item">
+                                    <div class="toggle-header" data-toggle="timestamp">
+                                        <span class="toggle-icon">🕐</span>
+                                        <h4>Timestamp Format</h4>
+                                        <span class="toggle-arrow">▼</span>
+                                    </div>
+                                    <div class="toggle-content" id="timestamp">
+                                        <p>UNIX time</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="training-section">
+                        <h3>Training</h3>
+                        <div class="training-content">
+                            <p class="training-description">The original project training process involves several key hyperparameters that control the model's behavior and performance:</p>
+                            <ul class="hyperparameters-list">
+                                <li><strong>seq_len:</strong> Input sequence length.</li>
+                                <li><strong>label_len:</strong> Label length.</li>
+                                <li><strong>pred_len:</strong> Output prediction window.</li>
+                                <li><strong>features:</strong> Forecasting task. Options: <strong>M</strong> for multivariate predict multivariate, <strong>S</strong> for univariate predict univariate, and <strong>MS</strong> for multivariate predict univariate.</li>
+                                <li><strong>patch_len:</strong> Patch length. 16 by default, reduce for short term tasks.</li>
+                                <li><strong>stride:</strong> Stride for patching. 8 by default, reduce for short term tasks.</li>
+                            </ul>
+                        </div>
+                    </div>
+                    
+                    <div class="inference-section">
+                        <h3>Inference</h3>
+                        <div class="inference-content">
+                            <p class="inference-description">Once the model is trained, CryptexLLM offers two types of forecasting to generate predictions:</p>
+                            
+                            <div class="inference-types">
+                                <div class="inference-type">
+                                    <div class="inference-header">
+                                        <h4>🎯 Standard Forecasting</h4>
+                                        <p>Predicts future values directly from the end of your data</p>
+                                    </div>
+                                    <div class="inference-details">
+                                        <div class="code-block">
+                                            <code>bash ./scripts/inference.sh</code>
+                                        </div>
+                                        <p><strong>What it does:</strong> Takes your historical data and predicts what happens next</p>
+                                        <p><strong>Output:</strong> Predictions displayed in terminal</p>
+                                    </div>
+                                </div>
+                                
+                                <div class="inference-type">
+                                    <div class="inference-header">
+                                        <h4>🔄 Autoregressive Forecasting</h4>
+                                        <p>Generates multiple overlapping predictions for robust forecasting</p>
+                                    </div>
+                                    <div class="inference-details">
+                                        <div class="code-block">
+                                            <code>bash ./scripts/inference_ar.sh</code>
+                                        </div>
+                                        <p><strong>What it does:</strong> Creates multiple predictions using sliding windows</p>
+                                        <p><strong>Output:</strong> Detailed CSV file with all predictions</p>
+                                    </div>
+                                </div>
+                            </div>
+                            
+                            <div class="autoregressive-diagram">
+                                <h4>How Autoregressive Forecasting Works</h4>
+                                <div class="diagram-container">
+                                    <div class="diagram-row">
+                                        <div class="data-window">
+                                            <span class="window-label">Row 0-23</span>
+                                            <div class="data-blocks">
+                                                <div class="data-block historical"></div>
+                                                <div class="data-block historical"></div>
+                                                <div class="data-block historical"></div>
+                                                <div class="data-block historical"></div>
+                                            </div>
+                                        </div>
+                                        <div class="arrow">→</div>
+                                        <div class="prediction-window">
+                                            <span class="prediction-label">6 predictions</span>
+                                            <div class="prediction-blocks">
+                                                <div class="prediction-block"></div>
+                                                <div class="prediction-block"></div>
+                                                <div class="prediction-block"></div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    
+                                    <div class="diagram-row">
+                                        <div class="data-window">
+                                            <span class="window-label">Row 1-24</span>
+                                            <div class="data-blocks">
+                                                <div class="data-block historical shifted"></div>
+                                                <div class="data-block historical"></div>
+                                                <div class="data-block historical"></div>
+                                                <div class="data-block historical"></div>
+                                            </div>
+                                        </div>
+                                        <div class="arrow">→</div>
+                                        <div class="prediction-window">
+                                            <span class="prediction-label">6 predictions</span>
+                                            <div class="prediction-blocks">
+                                                <div class="prediction-block"></div>
+                                                <div class="prediction-block"></div>
+                                                <div class="prediction-block"></div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    
+                                    <div class="diagram-row">
+                                        <div class="data-window">
+                                            <span class="window-label">Row 2-25</span>
+                                            <div class="data-blocks">
+                                                <div class="data-block historical shifted"></div>
+                                                <div class="data-block historical shifted"></div>
+                                                <div class="data-block historical"></div>
+                                                <div class="data-block historical"></div>
+                                            </div>
+                                        </div>
+                                        <div class="arrow">→</div>
+                                        <div class="prediction-window">
+                                            <span class="prediction-label">6 predictions</span>
+                                            <div class="prediction-blocks">
+                                                <div class="prediction-block"></div>
+                                                <div class="prediction-block"></div>
+                                                <div class="prediction-block"></div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    
+                                    <div class="diagram-legend">
+                                        <div class="legend-item">
+                                            <div class="legend-color historical"></div>
+                                            <span>Historical Data</span>
+                                        </div>
+                                        <div class="legend-item">
+                                            <div class="legend-color prediction"></div>
+                                            <span>Predictions</span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="work" class="section">
+            <div class="container">
+                <h2>Our Work</h2>
+                <div class="work-toggle-list">
+                    <div class="work-toggle-item">
+                        <div class="work-toggle-header" data-toggle="enhanced-feature">
+                            <h4>Enhanced Feature Engineering</h4>
+                            <span class="work-toggle-arrow">▼</span>
+                        </div>
+                        <div class="work-toggle-content" id="enhanced-feature">
+                            <p>Advanced techniques for extracting meaningful features from financial time series data, including technical indicators, statistical measures, and domain-specific transformations.</p>
+                        </div>
+                    </div>
+                    <div class="work-toggle-item">
+                        <div class="work-toggle-header" data-toggle="advanced-loss">
+                            <h4>Advanced Loss Functions</h4>
+                            <span class="work-toggle-arrow">▼</span>
+                        </div>
+                        <div class="work-toggle-content" id="advanced-loss">
+                            <p>Custom loss functions designed specifically for financial forecasting, incorporating risk-aware metrics and market volatility considerations.</p>
+                        </div>
+                    </div>
+                    <div class="work-toggle-item">
+                        <div class="work-toggle-header" data-toggle="multi-scale">
+                            <h4>Multi-Scale Architecture</h4>
+                            <span class="work-toggle-arrow">▼</span>
+                        </div>
+                        <div class="work-toggle-content" id="multi-scale">
+                            <p>Hierarchical model architectures that capture patterns across multiple time scales, from minute-level fluctuations to long-term market trends.</p>
+                        </div>
+                    </div>
+                    <div class="work-toggle-item">
+                        <div class="work-toggle-header" data-toggle="external-data">
+                            <h4>External Data Integration</h4>
+                            <span class="work-toggle-arrow">▼</span>
+                        </div>
+                        <div class="work-toggle-content" id="external-data">
+                            <p>Integration of external market indicators, news sentiment, and macroeconomic data to enhance prediction accuracy and provide broader market context.</p>
+                        </div>
+                    </div>
+                    <div class="work-toggle-item">
+                        <div class="work-toggle-header" data-toggle="model-architecture">
+                            <h4>Model Architecture Improvements</h4>
+                            <span class="work-toggle-arrow">▼</span>
+                        </div>
+                        <div class="work-toggle-content" id="model-architecture">
+                            <p>Custom modifications to transformer architectures optimized for financial time series, including attention mechanisms and positional encoding enhancements.</p>
+                        </div>
+                    </div>
+                    <div class="work-toggle-item">
+                        <div class="work-toggle-header" data-toggle="validation-evaluation">
+                            <h4>Validation & Evaluation</h4>
+                            <span class="work-toggle-arrow">▼</span>
+                        </div>
+                        <div class="work-toggle-content" id="validation-evaluation">
+                            <p>Comprehensive evaluation frameworks using walk-forward validation, backtesting, and financial-specific metrics to ensure robust model performance.</p>
+                        </div>
+                    </div>
+                    <div class="work-toggle-item">
+                        <div class="work-toggle-header" data-toggle="data-quality">
+                            <h4>Data Quality Enhancements</h4>
+                            <span class="work-toggle-arrow">▼</span>
+                        </div>
+                        <div class="work-toggle-content" id="data-quality">
+                            <p>Advanced data cleaning, anomaly detection, and quality assurance processes to ensure high-quality training data for optimal model performance.</p>
+                        </div>
+                    </div>
+                    <div class="work-toggle-item">
+                        <div class="work-toggle-header" data-toggle="domain-prompting">
+                            <h4>Domain-Specific Prompting</h4>
+                            <span class="work-toggle-arrow">▼</span>
+                        </div>
+                        <div class="work-toggle-content" id="domain-prompting">
+                            <p>Specialized prompt engineering techniques that incorporate financial domain knowledge and market-specific terminology to improve LLM understanding.</p>
+                        </div>
+                    </div>
+                    <div class="work-toggle-item">
+                        <div class="work-toggle-header" data-toggle="hyperparameter-optimization">
+                            <h4>Hyperparameter Optimization</h4>
+                            <span class="work-toggle-arrow">▼</span>
+                        </div>
+                        <div class="work-toggle-content" id="hyperparameter-optimization">
+                            <p>Systematic optimization of model hyperparameters using advanced search strategies to maximize forecasting performance and efficiency.</p>
+                        </div>
+                    </div>
+                    <div class="work-toggle-item">
+                        <div class="work-toggle-header" data-toggle="correlation-feature">
+                            <h4>Correlation-Based Feature Selection</h4>
+                            <span class="work-toggle-arrow">▼</span>
+                        </div>
+                        <div class="work-toggle-content" id="correlation-feature">
+                            <p>Intelligent feature selection algorithms that identify and retain the most predictive features while reducing noise and computational complexity.</p>
+                        </div>
+                    </div>
+                    <div class="work-toggle-item">
+                        <div class="work-toggle-header" data-toggle="mlflow-optuna">
+                            <h4>MLFlow & Optuna Integration</h4>
+                            <span class="work-toggle-arrow">▼</span>
+                        </div>
+                        <div class="work-toggle-content" id="mlflow-optuna">
+                            <p>Integration of MLFlow for experiment tracking and Optuna for automated hyperparameter tuning, enabling systematic model development and optimization.</p>
+                        </div>
+                    </div>
+                    <div class="work-toggle-item">
+                        <div class="work-toggle-header" data-toggle="backtesting">
+                            <h4>Backtesting</h4>
+                            <span class="work-toggle-arrow">▼</span>
+                        </div>
+                        <div class="work-toggle-content" id="backtesting">
+                            <p>Comprehensive backtesting framework that simulates trading strategies using historical data to validate model performance and assess real-world profitability under various market conditions.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="faq" class="section">
+            <div class="container">
+                <h2>FAQ</h2>
+                <div class="faq-grid">
+                    <div class="faq-item small">
+                        <h3>Is the code open source?</h3>
+                        <p>Yes, CryptexLLM is available as an open-source project with complete documentation.</p>
+                    </div>
+                    <div class="faq-item large">
+                        <h3>What makes CryptexLLM different from traditional forecasting models?</h3>
+                        <p>CryptexLLM leverages the contextual understanding capabilities of Large Language Models, allowing it to interpret financial data within broader market narratives and economic contexts, rather than relying solely on numerical patterns.</p>
+                    </div>
+                    <div class="faq-item medium">
+                        <h3>How accurate are the forecasts?</h3>
+                        <p>Our models demonstrate competitive performance against state-of-the-art time series forecasting methods while providing enhanced interpretability and context-aware predictions.</p>
+                    </div>
+                    <div class="faq-item medium">
+                        <h3>What types of financial data can CryptexLLM handle?</h3>
+                        <p>The system works with various financial time series data including stock prices, cryptocurrency values, commodity prices, and macroeconomic indicators.</p>
+                    </div>
+                    <div class="faq-item small">
+                        <h3>What hardware requirements are needed?</h3>
+                        <p>CryptexLLM can run on standard GPUs with at least 8GB VRAM for optimal performance.</p>
+                    </div>
+                    <div class="faq-item large">
+                        <h3>How does the model handle market volatility and sudden changes?</h3>
+                        <p>The model incorporates advanced risk-aware loss functions and multi-scale architecture to adapt to market volatility. It uses correlation-based feature selection to identify the most relevant indicators during different market conditions.</p>
+                    </div>
+                    <div class="faq-item medium">
+                        <h3>Can I integrate external data sources?</h3>
+                        <p>Yes, CryptexLLM supports external data integration including news sentiment, market indicators, and macroeconomic data to enhance predictions.</p>
+                    </div>
+                    <div class="faq-item small">
+                        <h3>How long does training take?</h3>
+                        <p>Training time varies from a few hours to several days depending on dataset size and hardware.</p>
+                    </div>
+                    <div class="faq-item medium">
+                        <h3>What evaluation metrics does CryptexLLM use?</h3>
+                        <p>The system uses comprehensive financial-specific metrics including walk-forward validation, backtesting results, and risk-adjusted performance measures.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Modal Overlay for Expanded Cards -->
+    <div class="modal-overlay" id="modalOverlay">
+        <div class="modal-content">
+            <button class="modal-close" id="modalClose">&times;</button>
+            <div class="modal-body" id="modalBody">
+                <!-- Content will be dynamically inserted here -->
+            </div>
+        </div>
+    </div>
+
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <a href="contact.html" class="footer-contact">Contact</a>
+                <blockquote class="footer-quote">
+                    "The best way to predict the future is to create it."
+                    <cite>— Peter Drucker</cite>
+                </blockquote>
+                <a href="https://github.com/abenhnini/Time-LLM-Cryptex" target="_blank" class="footer-github-btn">View on GitHub</a>
+                <p class="footer-copyright">&copy; 2024 CryptexLLM. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>

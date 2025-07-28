@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Us - CryptexLLM</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="contact-styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@200;300;400;500;600;700;800&display=swap" rel="stylesheet">
+</head>
+<body>
+    <nav class="navbar">
+        <div class="nav-container">
+            <div class="nav-logo">
+                <a href="index.html">
+                    <img src="img/cryptex-logo.png" alt="CryptexLLM Logo">
+                </a>
+            </div>
+            <div class="nav-menu">
+                <a href="index.html#overview" class="nav-link">Project Overview</a>
+                <a href="index.html#work" class="nav-link">Our Work</a>
+                <a href="index.html#faq" class="nav-link">FAQ</a>
+                <a href="index.html" class="nav-btn">Back to Home</a>
+            </div>
+            <div class="nav-toggle" id="navToggle">
+                <span class="bar"></span>
+                <span class="bar"></span>
+                <span class="bar"></span>
+            </div>
+        </div>
+    </nav>
+
+    <main class="contact-main">
+        <section class="contact-hero">
+            <div class="container">
+                <h1>Get in Touch</h1>
+                <p>Interested in learning more about CryptexLLM? We'd love to hear from you.</p>
+            </div>
+        </section>
+
+        <section class="contact-form-section">
+            <div class="container">
+                <div class="contact-content">
+                    <div class="contact-info">
+                        <h2>Contact Information</h2>
+                        <div class="contact-item">
+                            <h3>Research Team</h3>
+                            <p>Our dedicated team of researchers and developers are passionate about advancing the field of financial forecasting through innovative AI solutions.</p>
+                        </div>
+                        <div class="contact-item">
+                            <h3>Collaboration</h3>
+                            <p>We're open to academic collaborations, research partnerships, and discussions about potential applications of CryptexLLM.</p>
+                        </div>
+                        <div class="contact-item">
+                            <h3>Open Source</h3>
+                            <p>Visit our GitHub repository to explore the code, contribute to the project, or report issues.</p>
+                            <a href="https://github.com/TimeLLM-Cryptex" target="_blank" class="github-link">View Repository</a>
+                        </div>
+                    </div>
+
+                    <div class="contact-form-container">
+                        <form class="contact-form" id="contactForm">
+                            <h2>Send us a message</h2>
+                            
+                            <div class="form-group">
+                                <label for="name">Name *</label>
+                                <input type="text" id="name" name="name" required>
+                            </div>
+
+                            <div class="form-group">
+                                <label for="email">Email *</label>
+                                <input type="email" id="email" name="email" required>
+                            </div>
+
+                            <div class="form-group">
+                                <label for="organization">Organization</label>
+                                <input type="text" id="organization" name="organization">
+                            </div>
+
+                            <div class="form-group">
+                                <label for="interest">Area of Interest</label>
+                                <select id="interest" name="interest">
+                                    <option value="">Select an option</option>
+                                    <option value="research">Research Collaboration</option>
+                                    <option value="implementation">Implementation Support</option>
+                                    <option value="partnership">Partnership Opportunities</option>
+                                    <option value="general">General Inquiry</option>
+                                    <option value="other">Other</option>
+                                </select>
+                            </div>
+
+                            <div class="form-group">
+                                <label for="message">Message *</label>
+                                <textarea id="message" name="message" rows="6" required placeholder="Tell us about your interest in CryptexLLM, your research, or any questions you have..."></textarea>
+                            </div>
+
+                            <button type="submit" class="submit-btn">Send Message</button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <a href="contact.html" class="footer-contact">Contact</a>
+                <blockquote class="footer-quote">
+                    "The best way to predict the future is to create it."
+                    <cite>— Peter Drucker</cite>
+                </blockquote>
+                <a href="https://github.com/abenhnini/Time-LLM-Cryptex" target="_blank" class="footer-github-btn">View on GitHub</a>
+                <p class="footer-copyright">&copy; 2024 CryptexLLM. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="contact-script.js"></script>
+</body>
+</html>
