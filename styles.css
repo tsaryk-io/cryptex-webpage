@@ -1068,13 +1068,15 @@ body {
     
     .nav-btn {
         background-color: #000000;
-        color: #ffffff;
+        color: #ffffff !important;
         margin: 15px 40px;
-        padding: 14px 50px;
-        border-radius: 30px;
+        padding: 16px 70px;
+        border-radius: 25px;
         font-weight: 600;
         border-bottom: none !important;
         font-size: 16px;
+        min-width: 160px;
+        text-align: center;
     }
     
     .nav-btn:hover {
@@ -1278,5 +1280,90 @@ body {
     
     .section {
         padding: 60px 0;
+    }
+}
+
+/* Team Section */
+.team-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 40px;
+    max-width: 1000px;
+    margin: 0 auto;
+}
+
+.team-member {
+    background-color: #ffffff;
+    padding: 40px 30px;
+    border-radius: 20px;
+    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.08);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    text-align: center;
+}
+
+.team-member:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 15px 35px rgba(0, 0, 0, 0.12);
+}
+
+.team-image {
+    margin-bottom: 25px;
+}
+
+.team-image img {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 4px solid #f8f9fa;
+    transition: border-color 0.3s ease;
+}
+
+.team-member:hover .team-image img {
+    border-color: #007bff;
+}
+
+.team-info h3 {
+    font-size: 1.5rem;
+    font-weight: 600;
+    margin-bottom: 15px;
+    color: #000000;
+}
+
+.team-location {
+    font-size: 1rem;
+    color: #666666;
+    margin-bottom: 8px;
+}
+
+.team-education {
+    font-size: 1rem;
+    color: #333333;
+    margin-bottom: 8px;
+}
+
+.team-future {
+    font-size: 1rem;
+    color: #007bff;
+    font-weight: 500;
+}
+
+@media (max-width: 768px) {
+    .team-grid {
+        grid-template-columns: 1fr;
+        gap: 30px;
+    }
+    
+    .team-member {
+        text-align: center;
+    }
+    
+    .team-image {
+        margin-bottom: 20px;
+    }
+    
+    .team-image img {
+        width: 120px;
+        height: 120px;
     }
 }
