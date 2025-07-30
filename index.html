@@ -409,21 +409,53 @@
                         </div>
                     </div>
                     <div class="work-toggle-item">
-                        <div class="work-toggle-header" data-toggle="advanced-loss">
-                            <h4>Advanced Loss Functions</h4>
+                        <div class="work-toggle-header" data-toggle="adaptive-loss">
+                            <h4>Adaptive Loss Functions</h4>
                             <span class="work-toggle-arrow">▼</span>
                         </div>
-                        <div class="work-toggle-content" id="advanced-loss">
-                            <p>Custom loss functions designed specifically for financial forecasting, incorporating risk-aware metrics and market volatility considerations.</p>
-                        </div>
-                    </div>
-                    <div class="work-toggle-item">
-                        <div class="work-toggle-header" data-toggle="multi-scale">
-                            <h4>Multi-Scale Architecture</h4>
-                            <span class="work-toggle-arrow">▼</span>
-                        </div>
-                        <div class="work-toggle-content" id="multi-scale">
-                            <p>Hierarchical model architectures that capture patterns across multiple time scales, from minute-level fluctuations to long-term market trends.</p>
+                        <div class="work-toggle-content" id="adaptive-loss">
+                            <div class="adaptive-loss-content">
+                                <p class="loss-subtitle-simple">Smarter training through dynamic loss combination</p>
+                                
+                                <div class="loss-sections">
+                                    <div class="loss-section problem">
+                                        <div class="section-header">
+                                            <span class="section-icon">🔧</span>
+                                            <h6>The Problem</h6>
+                                        </div>
+                                        <ul>
+                                            <li>Fixed loss functions (like MSE) miss key signals</li>
+                                            <li>Manual tuning is slow and inconsistent</li>
+                                            <li>No one-size-fits-all for crypto forecasting</li>
+                                        </ul>
+                                    </div>
+                                    
+                                    <div class="loss-section solution">
+                                        <div class="section-header">
+                                            <span class="section-icon">✅</span>
+                                            <h6>Our Solution</h6>
+                                        </div>
+                                        <ul>
+                                            <li>Learnable weighting of multiple losses</li>
+                                            <li>Combines MSE, DLF, Trading Loss, MADL, etc.</li>
+                                            <li>Adapts weights during training based on performance</li>
+                                            <li><strong>Outperforms any single loss by +89.8%</strong></li>
+                                        </ul>
+                                    </div>
+                                    
+                                    <div class="loss-section benefits">
+                                        <div class="section-header">
+                                            <span class="section-icon">🚀</span>
+                                            <h6>Why It Works</h6>
+                                        </div>
+                                        <ul>
+                                            <li>Automatically finds the best loss combo</li>
+                                            <li>Supports 5 pre-defined strategies (e.g., Trading Focused, Robust)</li>
+                                            <li>No manual tuning — just better results, faster</li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
                         </div>
                     </div>
                     <div class="work-toggle-item">
@@ -432,34 +464,49 @@
                             <span class="work-toggle-arrow">▼</span>
                         </div>
                         <div class="work-toggle-content" id="external-data">
-                            <p>Integration of external market indicators, news sentiment, and macroeconomic data to enhance prediction accuracy and provide broader market context.</p>
-                        </div>
-                    </div>
-                    <div class="work-toggle-item">
-                        <div class="work-toggle-header" data-toggle="model-architecture">
-                            <h4>Model Architecture Improvements</h4>
-                            <span class="work-toggle-arrow">▼</span>
-                        </div>
-                        <div class="work-toggle-content" id="model-architecture">
-                            <p>Custom modifications to transformer architectures optimized for financial time series, including attention mechanisms and positional encoding enhancements.</p>
-                        </div>
-                    </div>
-                    <div class="work-toggle-item">
-                        <div class="work-toggle-header" data-toggle="validation-evaluation">
-                            <h4>Validation & Evaluation</h4>
-                            <span class="work-toggle-arrow">▼</span>
-                        </div>
-                        <div class="work-toggle-content" id="validation-evaluation">
-                            <p>Comprehensive evaluation frameworks using walk-forward validation, backtesting, and financial-specific metrics to ensure robust model performance.</p>
-                        </div>
-                    </div>
-                    <div class="work-toggle-item">
-                        <div class="work-toggle-header" data-toggle="data-quality">
-                            <h4>Data Quality Enhancements</h4>
-                            <span class="work-toggle-arrow">▼</span>
-                        </div>
-                        <div class="work-toggle-content" id="data-quality">
-                            <p>Advanced data cleaning, anomaly detection, and quality assurance processes to ensure high-quality training data for optimal model performance.</p>
+                            <div class="external-data-content">
+                                <p class="data-subtitle">From simulated patterns to real-time market insight</p>
+                                
+                                <div class="before-after">
+                                    <div class="comparison-header">
+                                        <span class="section-icon">🔁</span>
+                                        <h6>Before vs After</h6>
+                                    </div>
+                                    <div class="comparison-grid">
+                                        <div class="comparison-item before">
+                                            <strong>Before:</strong> Simulated sentiment using random patterns
+                                        </div>
+                                        <div class="comparison-item after">
+                                            <strong>After:</strong> Real sentiment from Reddit, News, and Fear & Greed Index APIs
+                                        </div>
+                                    </div>
+                                </div>
+                                
+                                <div class="architecture-section">
+                                    <div class="section-header">
+                                        <span class="section-icon">🏗️</span>
+                                        <h6>Architecture Highlights</h6>
+                                    </div>
+                                    <div class="architecture-steps">
+                                        <div class="arch-step">
+                                            <h6>API Integration</h6>
+                                            <ul>
+                                                <li>RedditSentimentAPI() – r/Bitcoin, r/cryptocurrency</li>
+                                                <li>FearGreedIndexAPI() – Daily crypto market sentiment</li>
+                                                <li>NewsAPISentiment() – Multiple sources via NewsAPI</li>
+                                            </ul>
+                                        </div>
+                                        <div class="arch-step">
+                                            <h6>Data Processing Pipeline</h6>
+                                            <ul>
+                                                <li>Reddit/News → Daily sentiment scores</li>
+                                                <li>Fear & Greed → Normalized index (0–1)</li>
+                                                <li>All fused via weighted average (30/30/40)</li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
                         </div>
                     </div>
                     <div class="work-toggle-item">
@@ -468,25 +515,99 @@
                             <span class="work-toggle-arrow">▼</span>
                         </div>
                         <div class="work-toggle-content" id="domain-prompting">
-                            <p>Specialized prompt engineering techniques that incorporate financial domain knowledge and market-specific terminology to improve LLM understanding.</p>
+                            <div class="domain-prompting-content">
+                                <p class="prompting-subtitle">Turning CryptexLLM into a market-aware system</p>
+                                
+                                <div class="what-we-built">
+                                    <div class="section-header">
+                                        <span class="section-icon">✅</span>
+                                        <h6>What We Built</h6>
+                                    </div>
+                                    
+                                    <p class="built-description">Dynamic prompts tailored to:</p>
+                                    
+                                    <div class="prompt-features">
+                                        <div class="prompt-feature">
+                                            <div class="feature-number">9</div>
+                                            <div class="feature-text">
+                                                <strong>Market regimes</strong>
+                                                <span>(bull/bear/sideways × vol levels)</span>
+                                            </div>
+                                        </div>
+                                        
+                                        <div class="prompt-feature">
+                                            <div class="feature-number">4</div>
+                                            <div class="feature-text">
+                                                <strong>Trading strategies</strong>
+                                                <span>(scalping, swing, position, day)</span>
+                                            </div>
+                                        </div>
+                                        
+                                        <div class="prompt-feature">
+                                            <div class="feature-number">∞</div>
+                                            <div class="feature-text">
+                                                <strong>External signals</strong>
+                                                <span>(sentiment, macro, on-chain)</span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    
+                                    <div class="infrastructure-stats">
+                                        <div class="stat-item">
+                                            <span class="stat-number">600+</span>
+                                            <span class="stat-label">lines of prompt infrastructure integrated with TimeLLM</span>
+                                        </div>
+                                    </div>
+                                    
+                                    <div class="supported-datasets">
+                                        <h6>Supports enhanced datasets:</h6>
+                                        <div class="dataset-tags">
+                                            <span class="dataset-tag">CRYPTEX_ENHANCED</span>
+                                            <span class="dataset-tag">CRYPTEX_EXTERNAL</span>
+                                            <span class="dataset-tag">CRYPTEX_REGIME_AWARE</span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
                         </div>
                     </div>
                     <div class="work-toggle-item">
                         <div class="work-toggle-header" data-toggle="hyperparameter-optimization">
-                            <h4>Hyperparameter Optimization</h4>
+                            <h4>Hyperparameter Sweep</h4>
                             <span class="work-toggle-arrow">▼</span>
                         </div>
                         <div class="work-toggle-content" id="hyperparameter-optimization">
-                            <p>Systematic optimization of model hyperparameters using advanced search strategies to maximize forecasting performance and efficiency.</p>
-                        </div>
-                    </div>
-                    <div class="work-toggle-item">
-                        <div class="work-toggle-header" data-toggle="correlation-feature">
-                            <h4>Correlation-Based Feature Selection</h4>
-                            <span class="work-toggle-arrow">▼</span>
-                        </div>
-                        <div class="work-toggle-content" id="correlation-feature">
-                            <p>Intelligent feature selection algorithms that identify and retain the most predictive features while reducing noise and computational complexity.</p>
+                            <div class="hyperparameter-content">
+                                <p class="hyperparameter-subtitle">Systematic tuning for peak CryptexLLM performance</p>
+                                
+                                <div class="hyperparameter-summary">
+                                    <div class="summary-stats">
+                                        <div class="stat-item">
+                                            <span class="stat-number">350+</span>
+                                            <span class="stat-label">trained models</span>
+                                        </div>
+                                        <div class="stat-item">
+                                            <span class="stat-number">6</span>
+                                            <span class="stat-label">LLMs tested</span>
+                                        </div>
+                                        <div class="stat-item">
+                                            <span class="stat-number">168</span>
+                                            <span class="stat-label">max sequence length</span>
+                                        </div>
+                                    </div>
+                                    
+                                    <div class="sweep-summary">
+                                        <p><strong>🎯 Goal:</strong> Identify optimal settings across model, prompt, and training configurations</p>
+                                        <p><strong>🔍 Swept:</strong> Model types, sequence lengths (2-168), loss functions (MSE, DLF, MADL, Trading Loss), prompt templates, prediction horizons (1-7), layer counts</p>
+                                        <p><strong>⚙️ Setup:</strong> Auto-logging of loss, accuracy, and inference time to NFS server</p>
+                                    </div>
+                                </div>
+                                
+                                <div class="hyperparameter-image">
+                                    <img src="img/model-correlation.png" alt="Model Correlation Results">
+                                    <p class="image-caption">Model performance correlation analysis across different hyperparameter configurations</p>
+                                </div>
+                            </div>
                         </div>
                     </div>
                     <div class="work-toggle-item">
@@ -495,7 +616,39 @@
                             <span class="work-toggle-arrow">▼</span>
                         </div>
                         <div class="work-toggle-content" id="mlflow-optuna">
-                            <p>Integration of MLFlow for experiment tracking and Optuna for automated hyperparameter tuning, enabling systematic model development and optimization.</p>
+                            <div class="mlflow-optuna-content">
+                                <p class="mlflow-subtitle">Automated tracking & optimization for CryptexLLM</p>
+                                
+                                <div class="integration-sections">
+                                    <div class="integration-section">
+                                        <div class="section-header">
+                                            <span class="section-icon">🚀</span>
+                                            <h6>What We Added</h6>
+                                        </div>
+                                        
+                                        <div class="integration-features">
+                                            <div class="feature-section mlflow">
+                                                <h6>MLFlow Autologging</h6>
+                                                <ul>
+                                                    <li>Tracks hyperparameters, metrics, and model artifacts</li>
+                                                    <li>Can also log sentiment API settings (Reddit, News, Fear & Greed)</li>
+                                                    <li>Stores trained models with full metadata</li>
+                                                </ul>
+                                            </div>
+                                            
+                                            <div class="feature-section optuna">
+                                                <h6>Optuna Optimization</h6>
+                                                <ul>
+                                                    <li>Smart hyperparameter search with TPE</li>
+                                                    <li>Early stopping for inefficient trials</li>
+                                                    <li>Fine-tunes sentiment weights & model settings</li>
+                                                    <li>Generates importance plots and optimization history</li>
+                                                </ul>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
                         </div>
                     </div>
                     <div class="work-toggle-item">
@@ -504,7 +657,36 @@
                             <span class="work-toggle-arrow">▼</span>
                         </div>
                         <div class="work-toggle-content" id="backtesting">
-                            <p>Comprehensive backtesting framework that simulates trading strategies using historical data to validate model performance and assess real-world profitability under various market conditions.</p>
+                            <div class="backtesting-content">
+                                <div class="backtesting-image">
+                                    <img src="img/backtesting.png" alt="Backtesting Results">
+                                    <p class="image-caption">Backtesting analysis across multiple LLM models and trading strategies</p>
+                                </div>
+                                
+                                <div class="backtesting-summary">
+                                    <div class="summary-stats">
+                                        <div class="stat-item">
+                                            <span class="stat-number">24</span>
+                                            <span class="stat-label">model-strategy combinations</span>
+                                        </div>
+                                        <div class="stat-item">
+                                            <span class="stat-number">6</span>
+                                            <span class="stat-label">LLM models tested</span>
+                                        </div>
+                                        <div class="stat-item">
+                                            <span class="stat-number">4</span>
+                                            <span class="stat-label">trading strategies</span>
+                                        </div>
+                                    </div>
+                                    
+                                    <div class="backtesting-highlights">
+                                        <p><strong>Models:</strong> DEEPSEEK, LLAMA3.1, QWEN, MISTRAL, GEMMA, LLAMA</p>
+                                        <p><strong>Strategies:</strong> Prediction-based, Directional, Momentum, Buy & Hold benchmark</p>
+                                        <p><strong>Metrics:</strong> Sharpe Ratio, Max Drawdown, Win Rate, Total Return with professional analysis</p>
+                                        <p><strong>Output:</strong> Interactive visualizations, detailed reports, institutional-grade analytics</p>
+                                    </div>
+                                </div>
+                            </div>
                         </div>
                     </div>
                 </div>
@@ -565,12 +747,12 @@
                         <p>CryptexLLM leverages the contextual understanding capabilities of Large Language Models, allowing it to interpret financial data within broader market narratives and economic contexts, rather than relying solely on numerical patterns.</p>
                     </div>
                     <div class="faq-item medium">
-                        <h3>How accurate are the forecasts?</h3>
-                        <p>Our models demonstrate competitive performance against state-of-the-art time series forecasting methods while providing enhanced interpretability and context-aware predictions.</p>
+                        <h3>What is Patch Reprogramming?</h3>
+                        <p>Patch Reprogramming converts continuous time series into small, semantically meaningful “patches,” which act like words in a sentence. These patches are then processed by LLMs as if reading a story, preserving the temporal structure of financial data while enabling the use of language-based models.</p>
                     </div>
                     <div class="faq-item medium">
-                        <h3>What types of financial data can CryptexLLM handle?</h3>
-                        <p>The system works with various financial time series data including stock prices, cryptocurrency values, commodity prices, and macroeconomic indicators.</p>
+                        <h3>Do you retrain LLMs like LLaMA or DeepSeek from scratch?</h3>
+                        <p>No. CryptexLLM keeps pre-trained LLM weights frozen and instead reprograms the input and output using lightweight, learnable projection layers. This dramatically reduces training costs while leveraging generalizability of large-scale language models.</p>
                     </div>
                     <div class="faq-item small">
                         <h3>What hardware requirements are needed?</h3>
@@ -589,8 +771,8 @@
                         <p>Training time varies from a few hours to several days depending on dataset size and hardware.</p>
                     </div>
                     <div class="faq-item medium">
-                        <h3>What evaluation metrics does CryptexLLM use?</h3>
-                        <p>The system uses comprehensive financial-specific metrics including walk-forward validation, backtesting results, and risk-adjusted performance measures.</p>
+                        <h3>Is CryptexLLM suitable for production or just research?</h3>
+                        <p>While CryptexLLM is a research prototype, it’s designed with production-readiness in mind. It includes automated tracking via MLFlow, hyperparameter optimization with Optuna, and efficient feature selection pipelines. These components make it scalable and adaptable for future real-world deployment.</p>
                     </div>
                 </div>
             </div>
@@ -616,7 +798,7 @@
                     <cite>— Peter Drucker</cite>
                 </blockquote>
                 <a href="https://github.com/abenhnini/Time-LLM-Cryptex" target="_blank" class="footer-github-btn">View on GitHub</a>
-                <p class="footer-copyright">&copy; 2024 CryptexLLM. All rights reserved.</p>
+                <p class="footer-copyright">&copy; 2025 CryptexLLM. All rights reserved.</p>
             </div>
         </div>
     </footer>
