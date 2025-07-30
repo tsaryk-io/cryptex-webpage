@@ -20,7 +20,7 @@
                 <a href="#work" class="nav-link">Our Work</a>
                 <a href="#team" class="nav-link">Team</a>
                 <a href="#faq" class="nav-link">FAQ</a>
-                <a href="contact.html" class="nav-btn">Learn More</a>
+                <a href="contact.html" class="nav-btn">Get in Touch</a>
             </div>
             <div class="nav-toggle" id="navToggle">
                 <span class="bar"></span>
@@ -41,8 +41,8 @@
         <section id="overview" class="section">
             <div class="container">
                 <h2>Project Overview</h2>
-                <p>CryptexLLM represents a groundbreaking approach to financial time series forecasting by reprogramming Large Language Models (LLMs) specifically for financial data analysis. Our innovative methodology bridges the gap between natural language processing capabilities and quantitative financial modeling.</p>
-                <p>By leveraging the inherent pattern recognition abilities of LLMs, we've developed a system that can understand and predict complex financial market behaviors with unprecedented accuracy and interpretability.</p>
+                <p>CryptexLLM represents a groundbreaking approach to financial time series forecasting by "reprogramming" Large Language Models (LLMs) to enhance their generalizability beyond traditional language tasks. Drawing inspiration from the original <a href="https://github.com/KimMeen/Time-LLM" target="_blank" class="timellm-link"><em>TimeLLM framework</em></a>, it bridges the worlds of natural language processing and quantitative finance.</p>
+                <p>This project explores how LLMs can be used to recognize patterns in financial data and anticipate market behavior — opening up new possibilities for understanding trends, volatility, and sentiment.</p>
                 
                 <div class="architecture-section">
                     <h3>Technical Architecture</h3>
@@ -53,57 +53,57 @@
                         <div class="architecture-text">
                             <div class="architecture-item clickable-card" data-card="patch">
                                 <h4>Patch "Reprogramming"</h4>
-                                <p>Time series data is divided into patches (subsequences), where each patch becomes a "word" in the LLM vocabulary. This approach enables efficient processing of long financial sequences while maintaining temporal relationships.</p>
+                                <p>Time series data is broken down into smaller segments, or "patches," with each patch treated like a word the language model can understand. This makes it easier for the model to process long sequences of financial data while still preserving the order and timing of events.</p>
                                 <div class="hidden-detail">
                                     <div class="card-detail-image">
                                         <img src="img/patch-reprogramming.png" alt="Patch-based Processing Diagram">
                                     </div>
                                     <div class="card-detail-content">
                                         <h4>Patch "Reprogramming"</h4>
-                                        <p>This innovative approach transforms time series forecasting by treating financial data like natural language. Each patch represents a temporal segment that carries semantic meaning, allowing the LLM to understand market patterns and trends as if reading a financial narrative.</p>
+                                        <p>This approach reimagines financial forecasting by treating market data like language. Each segment carries meaning, allowing the model to read trends and patterns as if following a financial story.</p>
                                         <ul>
-                                            <li>Divides continuous time series into meaningful subsequences</li>
+                                            <li>Breaks time series data into smaller, meaningful segments</li>
                                             <li>Maps each patch to vocabulary tokens for LLM processing</li>
-                                            <li>Preserves temporal dependencies across patches</li>
-                                            <li>Enables scalable processing of long financial sequences</li>
+                                            <li>Keeps the order and timing of events intact</li>
+                                            <li>Makes it possible to analyze long stretches of financial data efficiently</li>
                                         </ul>
                                     </div>
                                 </div>
                             </div>
                             <div class="architecture-item clickable-card" data-card="reprogramming">
                                 <h4>Prompt-as-Prefix</h4>
-                                <p>Our method keeps pre-trained LLM weights frozen (no fine-tuning required) and uses learnable input/output projections with positional embeddings to maintain temporal order, preserving the model's original capabilities.</p>
+                                <p>Our method keeps the original LLM weights unchanged and instead learns how to format the inputs and outputs. It also adds positional embeddings to maintain the sequence of events, allowing the model to understand time without losing its core abilities.</p>
                                 <div class="hidden-detail">
                                     <div class="card-detail-image">
                                         <img src="img/prompt-as-prefix.png" alt="Prompt-as-Prefix Strategy Diagram">
                                     </div>
                                     <div class="card-detail-content">
                                         <h4>Prompt-as-Prefix</h4>
-                                        <p>By keeping the pre-trained weights frozen, we preserve the LLM's learned representations while adapting it for financial forecasting through lightweight, learnable projections.</p>
+                                        <p>By keeping the pre-trained weights unchanged, we retain the LLM’s existing knowledge while adapting it to financial forecasting using small, trainable layers.</p>
                                         <ul>
-                                            <li>Frozen LLM weights maintain original language understanding</li>
-                                            <li>Learnable input projections adapt time series to LLM space</li>
-                                            <li>Output projections convert LLM outputs to forecasts</li>
-                                            <li>Positional embeddings encode temporal relationships</li>
+                                            <li>Provides contextual guidance</li>
+                                            <li>Bridges numerical data and language models</li>
+                                            <li>Supports flexibility without fine-tuning</li>
+                                            <li>Improves interpretability and directional accuracy</li>
                                         </ul>
                                     </div>
                                 </div>
                             </div>
                             <div class="architecture-item clickable-card" data-card="variants">
                                 <h4>Normalization</h4>
-                                <p>CryptexLLM supports multiple backbone architectures including LLaMA-7B (primary), GPT-2 (lightweight), and BERT (bidirectional), providing flexibility for different computational requirements.</p>
+                                <p>CryptexLLM uses reversible normalization to make financial data easier for the model to learn from. The data is scaled before prediction and then converted back to its original form for meaningful results.</p>
                                 <div class="hidden-detail">
                                     <div class="card-detail-image">
                                         <img src="img/normalization.png" alt="Normalization Strategy Diagram">
                                     </div>
                                     <div class="card-detail-content">
                                         <h4>Normalization</h4>
-                                        <p>Different LLM backbones offer various advantages for financial forecasting, from lightweight efficiency to bidirectional context understanding.</p>
+                                        <p>Normalization works by standardizing each input using its own mean and variance, then restoring the original scale after prediction — helping the model stay robust to shifting market conditions.</p>
                                         <ul>
-                                            <li><strong>LLaMA-7B:</strong> Primary backbone with optimal performance-efficiency balance</li>
-                                            <li><strong>GPT-2:</strong> Lightweight option for resource-constrained environments</li>
-                                            <li><strong>BERT:</strong> Bidirectional processing for comprehensive co000ntext analysis</li>
-                                            <li>Consistent API across all variants for easy switching</li>
+                                            <li>Stabilizes noisy financial data for better pattern recognition</li>
+                                            <li>Adapts to shifting market conditions</li>
+                                            <li>Restores original scale after prediction for interpretability</li>
+                                            <li>Uses instance-specific mean and variance for precise normalization</li>
                                         </ul>
                                     </div>
                                 </div>
@@ -115,37 +115,47 @@
                         <h3>Cryptex Dataset</h3>
                         <div class="dataset-content">
                             <div class="dataset-description">
-                                <p>The Cryptex dataset contains high-resolution OHLCV (Open, High, Low, Close, Volume) time series data for the BTC-USDT trading pair, extracted from the Binance.us exchange between September 2019 and July 2023. It features:</p>
+                                <p>The Cryptex dataset contains high-resolution OHLCV data for the BTC-USDT pair from Binance.us, spanning September 2019 to May 2024. It supports forecasting at multiple time scales — from daily to second-level granularity — enabling flexible analysis of both short- and long-term trends.</p>
                             </div>
                             <div class="dataset-toggle-list">
                                 <div class="toggle-item">
                                     <div class="toggle-header" data-toggle="granularity">
-                                        <span class="toggle-icon">⏱️</span>
-                                        <h4>Time Granularity</h4>
+                                        <span class="toggle-icon">📊</span>
+                                        <h4>Data Source</h4>
                                         <span class="toggle-arrow">▼</span>
                                     </div>
                                     <div class="toggle-content" id="granularity">
-                                        <p>Down to 1-second candlesticks</p>
+                                        <p>The financial data used in CryptexLLM is sourced from Yahoo Finance, a widely trusted platform for market information. Historical Bitcoin (BTC) data is utilized, including standard OHLCV metrics — Open, High, Low, Close prices, and trading Volume.</p>
                                     </div>
                                 </div>
                                 <div class="toggle-item">
                                     <div class="toggle-header" data-toggle="columns">
-                                        <span class="toggle-icon">📊</span>
-                                        <h4>Data Columns</h4>
+                                        <span class="toggle-icon">🕒</span>
+                                        <h4>Granularity</h4>
                                         <span class="toggle-arrow">▼</span>
                                     </div>
                                     <div class="toggle-content" id="columns">
-                                        <p>timestamp, open, close, high, low, volume</p>
+                                        <p>Data is processed at multiple resolutions — daily, hourly, by the minute, and down to the second — depending on the forecasting task. This multi-scale setup allows the model to be evaluated across both long-term trends and high-frequency market movements.</p>
                                     </div>
                                 </div>
                                 <div class="toggle-item">
                                     <div class="toggle-header" data-toggle="timestamp">
-                                        <span class="toggle-icon">🕐</span>
+                                        <span class="toggle-icon">🗓️</span>
                                         <h4>Timestamp Format</h4>
                                         <span class="toggle-arrow">▼</span>
                                     </div>
                                     <div class="toggle-content" id="timestamp">
-                                        <p>UNIX time</p>
+                                        <p>Each record is tagged with a Unix timestamp, enabling precise alignment with sentiment data, volatility measures, and other time-dependent inputs.</p>
+                                    </div>
+                                </div>
+                                <div class="toggle-item">
+                                    <div class="toggle-header" data-toggle="preprocessing">
+                                        <span class="toggle-icon">🧼</span>
+                                        <h4>Preprocessing & Variants</h4>
+                                        <span class="toggle-arrow">▼</span>
+                                    </div>
+                                    <div class="toggle-content" id="preprocessing">
+                                        <p>To ensure data quality and adaptability, missing values are cleaned or filled during preprocessing.</p>
                                     </div>
                                 </div>
                             </div>
@@ -217,7 +227,7 @@
                                         </div>
                                         <div class="arrow">→</div>
                                         <div class="prediction-window">
-                                            <span class="prediction-label">6 predictions</span>
+                                            <span class="prediction-label">6 predictions: 24-29</span>
                                             <div class="prediction-blocks">
                                                 <div class="prediction-block"></div>
                                                 <div class="prediction-block"></div>
@@ -238,7 +248,7 @@
                                         </div>
                                         <div class="arrow">→</div>
                                         <div class="prediction-window">
-                                            <span class="prediction-label">6 predictions</span>
+                                            <span class="prediction-label">6 predictions: 25-30</span>
                                             <div class="prediction-blocks">
                                                 <div class="prediction-block"></div>
                                                 <div class="prediction-block"></div>
@@ -259,7 +269,7 @@
                                         </div>
                                         <div class="arrow">→</div>
                                         <div class="prediction-window">
-                                            <span class="prediction-label">6 predictions</span>
+                                            <span class="prediction-label">6 predictions: 26-31</span>
                                             <div class="prediction-blocks">
                                                 <div class="prediction-block"></div>
                                                 <div class="prediction-block"></div>
@@ -296,7 +306,106 @@
                             <span class="work-toggle-arrow">▼</span>
                         </div>
                         <div class="work-toggle-content" id="enhanced-feature">
-                            <p>Advanced techniques for extracting meaningful features from financial time series data, including technical indicators, statistical measures, and domain-specific transformations.</p>
+                            <div class="feature-engineering-content">
+                                <div class="feature-transformation">
+                                    <span class="feature-count">6 OHLCV features</span>
+                                    <span class="arrow">→</span>
+                                    <span class="feature-count enhanced">68+ indicators</span>
+                                </div>
+                                
+                                <h5>Captures:</h5>
+                                
+                                <div class="feature-categories">
+                                    <div class="feature-category">
+                                        <h6>📈 Momentum & Trends</h6>
+                                        <p>SMA, EMA, RSI, MACD</p>
+                                    </div>
+                                    
+                                    <div class="feature-category">
+                                        <h6>📊 Volatility</h6>
+                                        <p>Bollinger Bands, GARCH, ATR</p>
+                                    </div>
+                                    
+                                    <div class="feature-category">
+                                        <h6>💹 Market Behavior</h6>
+                                        <p>VWAP, MFI, lag features</p>
+                                    </div>
+                                    
+                                    <div class="feature-category">
+                                        <h6>🕒 Time Features</h6>
+                                        <p>Hour, Day-of-Week, cyclical patterns</p>
+                                    </div>
+                                </div>
+                                
+                                <div class="implementation-note">
+                                    <code>Built into feature_engineering.py</code>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="work-toggle-item">
+                        <div class="work-toggle-header" data-toggle="correlation-selection">
+                            <h4>Correlation-Based Feature Selection</h4>
+                            <span class="work-toggle-arrow">▼</span>
+                        </div>
+                        <div class="work-toggle-content" id="correlation-selection">
+                            <div class="correlation-content">
+                                <div class="selection-summary">
+                                    <span class="feature-reduction">Keep only the <strong>20 most predictive features</strong></span>
+                                </div>
+                                
+                                <div class="process-section">
+                                    <h5>⚙️ Step-by-step process:</h5>
+                                    
+                                    <div class="process-steps">
+                                        <div class="process-step">
+                                            <div class="step-number">1</div>
+                                            <div class="step-content">
+                                                <p><strong>Rank by correlation</strong> with BTC price</p>
+                                            </div>
+                                        </div>
+                                        
+                                        <div class="process-step">
+                                            <div class="step-number">2</div>
+                                            <div class="step-content">
+                                                <p><strong>Remove highly similar features</strong> (correlation > 0.9)</p>
+                                            </div>
+                                        </div>
+                                        
+                                        <div class="process-step">
+                                            <div class="step-number">3</div>
+                                            <div class="step-content">
+                                                <p><strong>Score with</strong> Pearson, Mutual Info, F-statistic</p>
+                                            </div>
+                                        </div>
+                                        
+                                        <div class="process-step">
+                                            <div class="step-number">4</div>
+                                            <div class="step-content">
+                                                <p><strong>Select top 20</strong> — used in every training run</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                
+                                <div class="benefits-grid">
+                                    <div class="benefit-card">
+                                        <div class="benefit-icon">🚀</div>
+                                        <div class="benefit-content">
+                                            <h6>Faster training</h6>
+                                            <p><strong>5.2× speedup</strong></p>
+                                        </div>
+                                    </div>
+                                    
+                                    <div class="benefit-card">
+                                        <div class="benefit-icon">💾</div>
+                                        <div class="benefit-content">
+                                            <h6>Lighter memory load</h6>
+                                            <p><strong>~70% reduction</strong></p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
                         </div>
                     </div>
                     <div class="work-toggle-item">
